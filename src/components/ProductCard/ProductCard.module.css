@@ -52,15 +52,13 @@
   z-index: 2;
   background: linear-gradient(90deg, #c9a892 0%, #e8d8c7 100%);
   color: var(--text-color, #3c3532);
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8rem;
+  font-size: 12px;
   padding: 5px 16px;
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 2px 8px rgba(201, 168, 146, 0.18);
   font-weight: 600;
-  border: 1.5px solid #fff;
 }
 .productDetails {
   padding: 18px 15px 15px 15px;
@@ -81,14 +79,13 @@
   color: var(--accent, #c9a892);
 }
 .productMaterial {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.82rem;
+  font-size: 12px;
   color: var(--light-text, #6d6661);
   margin-bottom: 10px;
   letter-spacing: 0.2px;
 }
 .productPrice {
-  font-size: 1.13rem;
+  font-size: 18px;
   font-weight: 700;
   margin-top: 8px;
   color: #8c7a76;
@@ -99,8 +96,7 @@
   background: linear-gradient(90deg, #c9a892 0%, #8c7a76 100%);
   color: white;
   border: none;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.85rem;
+  font-size: 14px;
   letter-spacing: 1px;
   padding: 10px 0;
   width: 100%;
