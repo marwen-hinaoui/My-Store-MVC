@@ -1,0 +1,123 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(135deg, #f6eee5 60%, #e8d8c7 100%);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px 0 rgba(60, 53, 50, 0.1),
+    0 1.5px 6px 0 rgba(60, 53, 50, 0.07);
+  position: relative;
+  overflow: visible;
+  animation: fadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.productCard:hover {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 12px 40px 0 rgba(60, 53, 50, 0.16),
+    0 2px 8px 0 rgba(60, 53, 50, 0.1);
+}
+.productCard:hover .productImage img {
+  transform: scale(1.05);
+}
+.productCard:hover .addToCart {
+  opacity: 1;
+  transform: translateY(0);
+}
+.productImage {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 18px 18px 0 0;
+}
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.productBadge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: linear-gradient(90deg, #c9a892 0%, #e8d8c7 100%);
+  color: var(--text-color, #3c3532);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  padding: 5px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(201, 168, 146, 0.18);
+  font-weight: 600;
+  border: 1.5px solid #fff;
+}
+.productDetails {
+  padding: 18px 15px 15px 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 120px;
+}
+.productName {
+  font-size: 1.25rem;
+  margin-bottom: 7px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+.productCard:hover .productName {
+  color: var(--accent, #c9a892);
+}
+.productMaterial {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+  color: var(--light-text, #6d6661);
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+}
+.productPrice {
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin-top: 8px;
+  color: #8c7a76;
+  letter-spacing: 0.5px;
+}
+.addToCart {
+  margin-top: auto;
+  background: linear-gradient(90deg, #c9a892 0%, #8c7a76 100%);
+  color: white;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  width: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, opacity 0.3s, transform 0.3s;
+  position: relative;
+  opacity: 0;
+  transform: translateY(10px);
+  border-radius: 6px;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(140, 122, 118, 0.1);
+}
+.addToCart:hover {
+  background-color: var(--dark-accent, #8c7a76);
+}
+/* @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}  */
