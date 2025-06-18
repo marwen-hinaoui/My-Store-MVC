@@ -22,7 +22,7 @@ export default function ProductListPage() {
     <Row  style={{maxWidth: 700, margin:'auto'}}  gutter={[16, 16]}>
       {products.map((item, index) => {
         return (
-          <Col  xs={24} sm={12} md={12} lg={12}>
+          <Col key={index} xs={24} sm={12} md={12} lg={12}>
             <ProductCard
               id={index}
               title={item.title}

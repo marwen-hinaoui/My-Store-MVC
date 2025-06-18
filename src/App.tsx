@@ -7,18 +7,16 @@ import Support from "./views/Support/Support";
 
 function App() {
   return (
-  <div >
-
-        
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="product/:id" element={<ProductDetailPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="product/:id" element={<ProductDetailPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,0 +1,27 @@
+.container {
+  padding-top: 96px;
+  margin: auto;
+}
+.hero_image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../assets/images/store2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto 16px auto;
+  border-radius: 8px;
+}
+.hero_image * {
+  color: #fff;
+  margin: 7px;
+}
+
+.hero_image h2 {
+  font-weight: 200;
+}

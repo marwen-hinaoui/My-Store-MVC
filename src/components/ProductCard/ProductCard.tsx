@@ -19,7 +19,7 @@ export default function ProductCard({
         {category && <span className={styles.productBadge}>{category}</span>}
       </div>
       <div className={styles.productDetails}>
-        <h3 className={styles.productName}>{title}</h3>
+        <h6 className={styles.productName}>{title}</h6>
         <p className={styles.productPrice}>${price}</p>
         <button className={styles.addToCart} onClick={(e) => {}}>
           Add to Cart
