@@ -1,0 +1,15 @@
+.addToCart {
+  margin-top: auto;
+  color: #3c3532;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 7px;
+  cursor: pointer;
+
+  position: relative;
+  border-radius: 6px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(140, 122, 118, 0.1);
+  transition: background 0.3s;
+}

@@ -5,13 +5,15 @@ import { Product } from "../models/Product";
 export interface AppState {
   isLoading: boolean;
   products: Product[];
-  error: string;
+  productsLength: number;
+  error: string | null;
 }
 
 const initialState: AppState = {
   isLoading: false,
   products: [],
-  error: "",
+  error: null,
+  productsLength: 0,
 };
 
 export const AppSlices = createSlice({
@@ -26,6 +28,7 @@ export const AppSlices = createSlice({
     },
     set_products: (state, action: PayloadAction<Product[]>) => {
       state.products = action.payload;
+      state.productsLength = action.payload.length;
     },
   },
 });

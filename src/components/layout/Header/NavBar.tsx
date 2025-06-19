@@ -2,7 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Path } from "../../../types/type";
 import styles from "./NavBar.module.css";
 import { useEffect, useRef, useState } from "react";
-import shopIcon from "../../../assets/images/shop-icon.svg";
+import ButtonComponent from "../../ButtonComponent/ButtonComponent";
+
 const PathMap: Array<Path> = [
   {
     name: "Home",
@@ -28,7 +29,6 @@ export default function NavBar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const viewportHeight = window.innerHeight;
       if (currentScrollY <= 1) {
         setScrollNavbar(styles.navbar);
         setScrollContainer(styles.navbar_container);
@@ -48,25 +48,33 @@ export default function NavBar() {
     <nav className={scrollNavbar}>
       <div className={scrollContainer}>
         <div className={styles.navbar_brand}>
-          <img className={styles.icon} src={shopIcon} alt="icon" />
+          <div className={styles.icon}></div>
           <h1>MY STORE</h1>
         </div>
-        <ul className={styles.navbar_links}>
-          {PathMap.map((item, index) => {
-            return (
-              <li key={index}>
-                <Link
-                  className={
-                    location.pathname === item.path ? styles.active : ""
-                  }
-                  to={item.path}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+
+          <ul className={styles.navbar_links}>
+            {PathMap.map((item, index) => {
+              return (
+                <li key={index}>
+                  <Link
+                    className={
+                      location.pathname === item.path ? styles.active : ""
+                    }
+                    to={item.path}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
+            <ButtonComponent
+              text="Sign In"
+              clickFn={() => {
+                alert();
+              }}
+            />
+          </ul>
+
       </div>
     </nav>
   );

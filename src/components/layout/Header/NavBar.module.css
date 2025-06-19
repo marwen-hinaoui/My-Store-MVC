@@ -18,6 +18,7 @@
 .navbar_brand  {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .navbar_brand h1 {
   font-size: 18px;
@@ -26,7 +27,12 @@
 
 }
 .navbar_brand .icon{
+  background-image: url("../../../assets/images/shop-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 25px;
+  height: 25px;
 }
 
 
@@ -39,6 +45,7 @@
 .navbar_links {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 32px;
   margin: 0;
   padding: 0;

@@ -4,10 +4,11 @@ import HomePage from "./views/Home/HomePage";
 import ProductDetailPage from "./views/ProductDetail/ProductDetailPage";
 import Layout from "./components/layout/Layout";
 import Support from "./views/Support/Support";
+import { LoadingBarContainer } from "react-top-loading-bar";
 
 function App() {
   return (
-    <div>
+    <LoadingBarContainer>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -17,7 +18,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </LoadingBarContainer>
   );
 }
 

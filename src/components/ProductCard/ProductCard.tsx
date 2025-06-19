@@ -1,12 +1,17 @@
 import { Product } from "../../models/Product";
 import styles from "./ProductCard.module.css";
+
+interface ProductCardProps extends Product {
+  visibility?: boolean;
+}
+
 export default function ProductCard({
   id,
   title,
   price,
   image,
   category,
-}: Product) {
+}: ProductCardProps) {
   return (
     <div
       key={id}
