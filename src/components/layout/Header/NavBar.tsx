@@ -3,6 +3,7 @@ import { Path } from "../../../types/type";
 import styles from "./NavBar.module.css";
 import { useEffect, useRef, useState } from "react";
 import ButtonComponent from "../../ButtonComponent/ButtonComponent";
+import Logo from "../../Logo/logo";
 
 const PathMap: Array<Path> = [
   {
@@ -47,10 +48,7 @@ export default function NavBar() {
   return (
     <nav className={scrollNavbar}>
       <div className={scrollContainer}>
-        <div className={styles.navbar_brand}>
-          <div className={styles.icon}></div>
-          <h1>MY STORE</h1>
-        </div>
+        <Logo />
 
           <ul className={styles.navbar_links}>
             {PathMap.map((item, index) => {

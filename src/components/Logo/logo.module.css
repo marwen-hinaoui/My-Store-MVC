@@ -1,0 +1,43 @@
+.navbar_brand  {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar_brand h1 {
+  font-size: 18px;
+  color: #000;
+  margin-left: 7px;
+
+}
+
+.navbar_brand .icon{
+  background-image: url("../../assets/images/shop-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+}
+
+
+.navbar_brand_white  {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar_brand_white h1 {
+  font-size: 18px;
+  color: #fff;
+  margin-left: 7px;
+
+}
+
+
+.navbar_brand_white .iconWhite{
+  background-image: url("../../assets/images/shop-icon-white.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+}
