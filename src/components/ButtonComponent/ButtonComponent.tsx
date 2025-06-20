@@ -1,18 +1,21 @@
 import { ReactElement } from "react";
 import styles from "./ButtonComponent.module.css";
+import { Button } from "antd";
 
 interface ButtonProps {
-  children?:ReactElement;
+  children?: ReactElement;
   text?: string;
   clickFn: () => void;
 }
 
-export default function ButtonComponent({children, text, clickFn }: ButtonProps) {
+export default function ButtonComponent({
+  children,
+  text,
+  clickFn,
+}: ButtonProps) {
   return (
-    <button className={styles.addToCart} onClick={clickFn}>
-      {
-      text ? text : children
-      }
-    </button>
+    <Button onClick={clickFn} className={styles.addToCart} color="default" variant="filled">
+      {text ? text : children}
+    </Button>
   );
 }

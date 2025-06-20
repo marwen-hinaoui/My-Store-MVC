@@ -4,6 +4,7 @@ import styles from "./NavBar.module.css";
 import { useEffect, useRef, useState } from "react";
 import ButtonComponent from "../../ButtonComponent/ButtonComponent";
 import Logo from "../../Logo/logo";
+import { SearchOutlined } from "@ant-design/icons";
 
 const PathMap: Array<Path> = [
   {
@@ -49,30 +50,39 @@ export default function NavBar() {
     <nav className={scrollNavbar}>
       <div className={scrollContainer}>
         <Logo />
-
-          <ul className={styles.navbar_links}>
-            {PathMap.map((item, index) => {
-              return (
-                <li key={index}>
-                  <Link
-                    className={
-                      location.pathname === item.path ? styles.active : ""
-                    }
-                    to={item.path}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              );
-            })}
-            <ButtonComponent
-              text="Sign In"
-              clickFn={() => {
-                alert();
+        <ul className={styles.navbar_links}>
+          {PathMap.map((item, index) => {
+            return (
+              <li key={index}>
+                <Link
+                  className={
+                    location.pathname === item.path ? styles.active : ""
+                  }
+                  to={item.path}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
+          <div style={{
+            display:'flex'
+          }}>
+            <div
+              style={{
+                marginRight: "12px",
               }}
-            />
-          </ul>
+            >
+              <ButtonComponent
+                text="Sign In"
+                clickFn={() => {
+                  alert();
+                }}
+              />
+            </div>
 
+          </div>
+        </ul>
       </div>
     </nav>
   );
